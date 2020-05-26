@@ -1,0 +1,171 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+       
+
+    body {
+      font-family: Geneva, Geneva, sans-serif;
+      background-color: white;
+      display: block;
+      max-width: 95%;
+      margin: auto;
+    }
+
+    a:link {
+      color: grey;
+    }
+    a:visited {
+      color: darkgreen;
+    }
+    a:hover {
+      color: grey;
+    }
+
+    .index_img {
+      max-width: 350px;
+      /* max-height: 500px; */
+    }
+  
+   .index_container {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-around;
+   }
+  
+   .index_tile {
+     width: 48%;
+     margin: 5px;
+     padding: 5px;
+     background: white;
+     text-align: center;
+   }
+
+  .show-container {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    background-color: white;
+  }
+  
+  .show-img {
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .profile {
+    max-width: 80%;
+    margin: auto;
+    max-height: 600px;
+    display: block;  
+  }
+
+  .profile-img {
+    max-width: 25%;
+    margin-left: 10%;
+    float: left;
+    padding: 20px;
+    padding-right: 30px;
+  }
+
+  .profile-text {
+    padding-top: 5px;
+    padding-bottom: 10%;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+  .home-container {
+    max-width: 80%;
+    margin: auto;
+    max-height: 800px;
+  }
+
+  .featured-room {
+    max-width: 75%;
+    margin: auto;
+    height: 500px;
+    padding: 20px;
+  }
+  
+  .featured-container {
+    max-width: 70%;
+    position: relative;
+    text-align: center;
+    margin: auto;
+  }
+
+  .featured-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+  }
+  
+  .featured-container:hover .overlay {
+    opacity: .9;
+  }
+ 
+  
+  .centered {
+    color: darkgreen;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .featured-text {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .footer {
+    max-width: 110%;
+    padding: 10px 0;
+    text-align: center;
+    margin-top:auto;
+  }
+
+  header {
+    margin: auto;
+  }
+
+  .title {
+    text-align: left;
+    font-size: 3em;
+    margin-left: 5%;
+  }
+
+  .nav {
+    text-align: right;
+    margin-right: 5%;
+  }

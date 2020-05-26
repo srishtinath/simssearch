@@ -1,0 +1,9 @@
+<h1>Edit an existing record:</h1>
+
+<%= form_for @room_furniture do |f| %>
+<p><%= f.label :room_id, "Room" %></p>
+<%= f.collection_select(:room_id, Room.all, :id, :title) %>
+<p><%= f.label :furniture_id, "Furniture" %></p>
+<%= f.collection_select(:furniture_id, Furniture.all, :id, :category) %>
+<p><%= f.submit %></p>
+<% end %>

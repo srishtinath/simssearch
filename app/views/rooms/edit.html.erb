@@ -1,0 +1,30 @@
+<h1>Edit a room</h1>
+
+<center><img class="show-img" src="<%= @room.img_url %>" alt="<%= @room.title%>" style="width:60%"></center>
+
+<%= form_for @room do |f| %>
+<p><%= f.label :category, "Category (Kitchen, Bathroom, etc.)" %></p>
+<%= f.text_field :category %>
+
+<p><%= f.label :primary_color_scheme, "Color Scheme" %></p>
+<%= f.text_field :primary_color_scheme %>
+
+<p><%= f.label :style, "Style" %></p>
+<%= f.text_field :style %>
+
+<p><%= f.label :title, "Title" %></p>
+<%= f.text_field :title %>
+
+<p><%= f.label :img_url, "Image URL" %></p>
+<%= f.text_field :img_url %>
+
+<p><%= f.label :blurb, "Blurb" %></p>
+<%= f.text_area :blurb %>
+
+<p><%= f.label :long_description, "Description" %></p>
+<%= f.text_area :long_description %>
+
+<p><%= f.submit %></p>
+<% end %>
+
+<br>

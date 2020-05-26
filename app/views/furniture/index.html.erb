@@ -1,0 +1,8 @@
+<h1>All Furniture</h1>
+
+<ul>
+<% @furnitures.each do |furn| %>
+<li><%= link_to  furn.category, furniture_path(furn) %></li>
+</ul>
+
+<% end %>

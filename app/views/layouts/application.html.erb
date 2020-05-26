@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SimsSearch</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class='header'>
+    <div class='header title'>Srishti's Sims Portfolio </div>
+    <div class='header nav'>
+      <p><%= link_to  "Welcome", home_path %> | <%= link_to  "All Houses", houses_path %> | <%= link_to  "All Rooms", rooms_path %> | <%= link_to  "Profile", profile_path %></div></p>
+      <br>
+    </div>
+  </div>
+    <%= yield %>
+
+  <footer>
+  <div class='body footer'>
+  <p> <%= link_to  "LinkedIn", 'https://www.linkedin.com/in/srishti-nath-0346ab8a/' %> | <%= link_to  "E-mail", 'mailto:srishti.nath@gmail.com' %> </p>
+  </div>
+  </footer>
+  </body>
+</html>

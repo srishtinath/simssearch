@@ -1,0 +1,28 @@
+<div class='home-container'>
+<h1>Welcome to my Sims 4 House Build Portfolio!</h1>
+
+<p>I started on my Sims journey a few months ago, as quarantine set in, along with boredom and the insanity that comes with it.
+I very quickly became enamored, not with game play, but the endless opportunities for interior design that it provided.</p>
+
+<p>For full disclosure, I don't have all of the expansion packs that Sims comes with; so far I've only got the base game, and Jungle Adventure and literally just bought the Get Together, Laundry Stuff and Spa Day packs. 
+I think my favorite is Jungle Adventure for all of the gorgeous colors it contains; I'm a sucker for yellow walls, and the antique-y blue it's rife with.  
+Since quarantine has locked me down, Sims has been amazing in allowing my imagination to wander the universe. I'm very excited about the houses I've gotten to build in the process, and very excited to share them with you!
+Feel free to peruse this website for the houses, rooms, and furniture I've used in my journey on Sims. </p>
+</div>
+<br>
+<hr size="1" color="grey" width="30%" align="center">
+
+<div class='featured-room'>
+    <h3 align="center">Featured Room: <%= @featured_room.category %> from <%= @featured_room.house.name %></h3>
+
+    <%# <p align="center" style="color:grey">Style: <%= @featured_room.style</p>  %>
+
+    <div class='featured-container'>
+        <a href="<%= room_path(@featured_room) %>"> 
+        <img class='featured-img' src="<%= @featured_room.img_url %>" align="center">
+        <div class='overlay'>
+        <div class='centered'><%= @featured_room.blurb %></div>
+        </div>
+        </a>
+    </div>
+</div>

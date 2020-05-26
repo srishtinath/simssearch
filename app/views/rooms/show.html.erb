@@ -1,0 +1,16 @@
+<h1 align="center"><%= @room.title.titleize  %></h1>
+
+<p align="center" style="color:grey"><%= @room.blurb %></p>
+
+<div class='show-container'>
+    <img class="show-img" src="<%= @room.img_url %>" alt="<%= @room.title%>">
+  <p></p>
+  <p align="center">Category: <%= @room.category %> |  Style: <%= @room.style %></p>
+
+  <p><%= @room.long_description %></p>
+ 
+</div>
+
+<br>
+<p align="right">Go back to <%= link_to  @room.house.name, house_path(@room.house) %></p>
+<p align="right"><%= link_to  "All Rooms", rooms_path %></p>

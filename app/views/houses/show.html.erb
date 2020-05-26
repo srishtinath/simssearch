@@ -1,0 +1,26 @@
+<h1 align="center">Welcome to <%= @house.name %>!</h1>
+
+
+<div class='show-container'>
+  <div class='show-pics'>
+    <img class="show-img" src="<%= @house.img_url %>" alt="<%= @house.name%>" style="height:800px" align="center">
+  <marquee behavior="scroll" direction="left">
+    <img class="show-img" src="<%= @house.img_url2 %>" alt="<%= @house.name%>" style="height:400px">
+    <img class="show-img" src="<%= @house.img_url3 %>" alt="<%= @house.name%>" style="height:400px">
+    <img class="show-img" src="<%= @house.img_url4 %>" alt="<%= @house.name%>" style="height:400px">
+  </marquee>
+  </div>
+  
+  <p>Description: </p>
+  <p><%= @house.description %></p> 
+
+    <ul>
+    <% @house.rooms.each do |room| %>
+    <li><%= link_to  room.category, room_path(room) %> | <%= room.title %></li>
+    <% end %>
+    </ul>
+
+</div>
+
+<br>
+<%= link_to  "All Houses", houses_path %>

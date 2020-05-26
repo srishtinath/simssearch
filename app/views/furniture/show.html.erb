@@ -1,0 +1,9 @@
+<h1><%= @furniture.style %> <%= @furniture.category %></h1>
+
+This piece of furniture has been used in:
+<ul>
+<% @furniture.rooms.each do |room| %>
+    <li><<%= link_to  room.title, room_path(room) %></li>
+<% end %>
+
+</ul>
