@@ -3,4 +3,7 @@
 
 require_relative 'config/application'
 
+task task_name: :environment do
+end
+
 Rails.application.load_tasks

@@ -1,4 +1,4 @@
-PostgreSQL. Versions 9.3 and up are supported.
+# PostgreSQL. Versions 9.3 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
@@ -22,15 +22,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: db/development
-
-  # The specified database role being used to connect to postgres.
-  # To create additional roles in postgres see `$ createuser --help`.
-  # When left blank, postgres will use the default role. This is
-  # the same name as the operating system user that initialized the database.
+  adapter: postgresql
+  encoding: unicode
+  # database: db/development
+  pool: 5
   username: srishtinath
-
+  host: localhost
   # The password associated with the postgres role (username).
   password:
 
@@ -41,7 +38,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  port: 5433
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -78,3 +75,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+production: 
+  <<: *default
+  database: db/production
+  username: srishtinath
+  # password: <%= ENV['password'] %>
