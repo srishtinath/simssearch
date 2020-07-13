@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_05_25_205935) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "furnitures", force: :cascade do |t|
     t.string "category"
     t.string "style"
