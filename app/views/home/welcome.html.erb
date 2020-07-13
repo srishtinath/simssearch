@@ -15,8 +15,6 @@ Feel free to peruse this website for the houses, rooms, and furniture I've used 
 <div class='featured-room'>
     <h3 align="center">Featured Room: <%= @featured_room.category %> from <%= @featured_room.house.name %></h3>
 
-    <%# <p align="center" style="color:grey">Style: <%= @featured_room.style</p>  %>
-
     <div class='featured-container'>
         <a href="<%= room_path(@featured_room) %>"> 
         <img class='featured-img' src="<%= @featured_room.img_url %>" align="center">
